@@ -1,8 +1,12 @@
-package com.example.movieapp.data
+package com.example.movieapp.data.api.model.artist
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "popular_artists")
 data class Artist(
+    @PrimaryKey
     val id: Int?,
-    val known_for: List<KnownFor>?,
     val name: String?,
     val popularity: Double?,
     val profile_path: String?

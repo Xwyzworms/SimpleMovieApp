@@ -1,6 +1,4 @@
-package com.example.movieapp.data
-
-import com.example.movieapp.data.Movie
+package com.example.movieapp.data.api.model.movie
 
 data class MovieList(
 

@@ -1,6 +1,5 @@
-package com.example.movieapp.data
+package com.example.movieapp.data.api.model.artist
 
-import com.example.movieapp.data.Artist
 import com.google.gson.annotations.SerializedName
 
 data class ArtistList(

@@ -1,7 +1,13 @@
-package com.example.movieapp.data
+package com.example.movieapp.data.api.model.tvshow
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName="popular_tvshows")
 data class TvShow(
     val first_air_date: String?,
+
+    @PrimaryKey
     val id: Int?,
     val name: String?,
     val overview: String?,

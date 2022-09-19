@@ -1,7 +1,12 @@
-package com.example.movieapp.data
+package com.example.movieapp.data.api.model.movie
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "popular_movies")
 data class Movie(
 
+    @PrimaryKey
     val id: Int?,
     val overview: String?,
     val popularity: Double?,
