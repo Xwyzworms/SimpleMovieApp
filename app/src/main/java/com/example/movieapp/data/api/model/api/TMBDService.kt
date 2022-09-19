@@ -1,4 +1,4 @@
-package com.example.movieapp.data.api
+package com.example.movieapp.data.api.model.api
 
 import com.example.movieapp.data.api.model.artist.ArtistList
 import com.example.movieapp.data.api.model.movie.MovieList
