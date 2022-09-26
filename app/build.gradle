@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_KEY", "\"ffc139888f7e90ab47c08d45d2f60cc4\""
     }
 
     buildTypes {
@@ -23,6 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -46,15 +48,37 @@ dependencies {
     def retrofit_version = "2.9.0"
     def glide_version = "4.13.2"
 
-    //
+    //live Data
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
-    //
+    // View Model
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
-    //
+    // Saved State module for ViewModel
 
-    //
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    //annotation Processor
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
 
-    //
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6"
+
+    //glide
+    implementation "com.github.bumptech.glide:glide$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
