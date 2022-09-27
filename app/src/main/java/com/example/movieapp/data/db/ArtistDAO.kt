@@ -13,7 +13,7 @@ interface ArtistDAO {
     suspend fun deleteAllArtists();
 
     @Query("SELECT * FROM popular_artists")
-    suspend fun getArtist()
+    suspend fun getArtist() : List<Artist>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveArtists(artists: List<Artist>)

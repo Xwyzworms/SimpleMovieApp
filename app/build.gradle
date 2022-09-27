@@ -16,6 +16,12 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "API_KEY", "\"ffc139888f7e90ab47c08d45d2f60cc4\""
+
+        kotlinOptions{
+            freeCompilerArgs += [
+                    "-Xjvm-default=all",
+            ]
+        }
     }
 
     buildTypes {
